@@ -12,12 +12,12 @@ export default function SnackList() {
   });
 
   return (
-    <ol>
+    <ul>
       {sortedSnacks.map((snack) => (
         <li key={snack.name}>
           {snack.rank}. {snack.name}
         </li>
       ))}
-    </ol>
+    </ul>
   );
 }
