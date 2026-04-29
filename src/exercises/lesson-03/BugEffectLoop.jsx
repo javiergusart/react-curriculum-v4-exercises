@@ -14,11 +14,11 @@ export default function BugEffectLoop() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCount(count + 1);
-  });
+    setCount(1);
+  }, []);
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
-// (Write your explanation here)
+// The effect was running every time the component updated so the count kept changing over and over, I fixed it by adding an empty array so it only runs one time when the component first shows up.
