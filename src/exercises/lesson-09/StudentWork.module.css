@@ -214,6 +214,17 @@
   font-size: 1.3rem;
 }
 
+.question-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inline-actions {
+  display: flex;
+  gap: 10px;
+}
+
 /* Options Section */
 .options-section {
   margin-top: 20px;
@@ -281,6 +292,11 @@
 
 .option-delete-btn:hover {
   background: #c82333;
+}
+
+.option-delete-btn:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
 }
 
 .add-option {
