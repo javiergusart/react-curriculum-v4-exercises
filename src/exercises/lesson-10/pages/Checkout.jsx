@@ -1,11 +1,17 @@
 import { useNavigate } from 'react-router-dom';
 
+const lessonBasePath = '/lessons/lesson-10';
+
 export default function Checkout() {
-  const navigate = null;
+  const navigate = useNavigate();
 
-  function handleGoHome() {}
+  function handleGoHome() {
+    navigate(lessonBasePath);
+  }
 
-  function handleBack() {}
+  function handleBack() {
+    navigate(-1);
+  }
 
   return (
     <section>
