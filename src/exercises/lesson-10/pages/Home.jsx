@@ -1,4 +1,6 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
+const lessonBasePath = '/lessons/lesson-10';
 
 export default function Home({ products }) {
   return (
@@ -40,6 +42,12 @@ export default function Home({ products }) {
 
             <p style={{ margin: 0 }}>
               <strong>${p.price.toFixed(2)}</strong>
+            </p>
+
+            <p style={{ margin: '10px 0 0' }}>
+              <Link to={`${lessonBasePath}/products/${p.id}`}>
+                View details
+              </Link>
             </p>
           </article>
         ))}
